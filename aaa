@@ -1,0 +1,24 @@
+https://blog.csdn.net/u011186019/article/details/55683458
+
+系统：windows 8.1   　　数据库：postgresql 9.6.2 解压版
+
+1、下载：https://get.enterprisedb.com/postgresql/postgresql-9.6.2-1-windows-x64-binaries.zip
+
+2、将下载的zip放在D盘，并解压
+
+3、进入解压的文件夹：pgsql，并创建一个文件夹data，用于存放数据文件
+
+4、打开命令窗口，进入pgsql/bin下，执行：initdb.exe -D D:\pgsql\data -E UTF8
+
+5、启动pgsql命令："pg_ctl" -D "D:\pgsql\data" -l logfile start
+
+6.、进入数据库：psql postgres
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+配置PGDATA环境变量，该变量用于指定数据库文件的存放目录:"D:\pgsql\data"
+
+配置完成后直接启动无需加-D参数 pg_ctl -l logfile start
+————————————————
+版权声明：本文为CSDN博主「神奇时代」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/u011186019/article/details/55683458
